@@ -67,8 +67,9 @@ function build_firmware(){
     echo "$glversiontype" > package/base-files/files/etc/version.type
     # fix helloword build error
     rm -rf feeds/packages/lang/golang
-    rm -rf feeds/gl_feed_common/golang
     svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    rm -rf feeds/gl_feed_common/golang
+    svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/gl_feed_common/golang
     # fix upnp https://forum.gl-inet.cn/forum.php?mod=viewthread&tid=3240&highlight=upnp
     rm -rf feeds/packages/net/miniupnpd
     svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/miniupnpd feeds/packages/net/miniupnpd
