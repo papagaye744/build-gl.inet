@@ -2,13 +2,13 @@ Index: b/util/linuxfw/linuxfw.go
 ===================================================================
 --- a/util/linuxfw/linuxfw.go
 +++ b/util/linuxfw/linuxfw.go
-@@ -90,7 +90,7 @@ const (
+@@ -88,7 +88,7 @@ const (
 	// Packet was originated by tailscaled itself, and must not be
 	// routed over the Tailscale network.
--	tailscaleBypassMark    = "0x80000"
--	tailscaleBypassMarkNum = 0x80000
-+	tailscaleBypassMark    = "0x800000"
-+	tailscaleBypassMarkNum = 0x800000
+-	TailscaleBypassMark    = "0x80000"
+-	TailscaleBypassMarkNum = 0x80000
++	TailscaleBypassMark    = "0x800000"
++	TailscaleBypassMarkNum = 0x800000
 )
 
 // getTailscaleFwmarkMaskNeg returns the negation of TailscaleFwmarkMask in bytes.
