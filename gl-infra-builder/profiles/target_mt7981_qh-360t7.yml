@@ -7,10 +7,10 @@ description: Build image for the QiHoo 360T7
 feeds:
   - name: gl_feed_common
     uri: https://github.com/gl-inet/gl-feeds.git
-    revision: 26cc770c6c17a7e8bdf2572b54777deecef01189
+    revision: 86b1d0f56c9e2b2f4f2f12562ba181cc22490198
   - name: gl_feed_21_02
     uri: https://github.com/gl-inet/gl-feeds.git
-    revision: 581563a214d313c367d7ffe5a1e9038fc18292ed
+    revision: 44d2d82eceb5e45c519f68f1838582ddbfe83a86
   - name: gl_feed_mtk
     uri: https://github.com/gl-inet/gl-feeds.git
     # 7.6.6.1
@@ -37,3 +37,4 @@ packages:
   - kmod-mtfwd
   - kmod-mtqos
   - conntrack
+  - iptables-mod-fullconenat
