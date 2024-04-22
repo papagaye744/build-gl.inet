@@ -68,7 +68,9 @@ function build_firmware(){
     
     # fix helloword build error
     rm -rf feeds/packages/lang/golang
-    svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    git clone -b openwrt-23.05 --depth=1 https://github.com/openwrt/packages /tmp/openwrt_packages
+    cp -R /tmp/openwrt_packages/lang/golang feeds/packages/lang/golang
     rm -rf feeds/gl_feed_common/golang
     #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/gl_feed_common/golang
     cp -rf feeds/packages/lang/golang feeds/gl_feed_common/golang
@@ -79,7 +81,9 @@ function build_firmware(){
     
     # fix upnp https://forum.gl-inet.cn/forum.php?mod=viewthread&tid=3240&highlight=upnp
     rm -rf feeds/packages/net/miniupnpd
-    svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/miniupnpd feeds/packages/net/miniupnpd
+    #svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/miniupnpd feeds/packages/net/miniupnpd
+    git clone -b openwrt-18.06 --depth=1 https://github.com/immortalwrt/packages /tmp/immortalwrt_packages
+    cp -R /tmp/immortalwrt_packages/net/miniupnpd feeds/packages/net/miniupnpd
     
     # add fullcorenat patch
     # mkdir package/network/config/firewall/patches
