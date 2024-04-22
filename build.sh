@@ -51,7 +51,10 @@ function build_firmware(){
     ui_path=$2
     # fix helloword build error
     rm -rf feeds/packages/lang/golang
-    svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    git clone -b openwrt-23.05 --depth=1 https://github.com/openwrt/packages /tmp/openwrt_packages
+    cp -R /tmp/openwrt_packages/lang/golang feeds/packages/lang/golang
+    
     #install feed 
     ./scripts/feeds update -a && ./scripts/feeds install -a && make defconfig
     #build 
