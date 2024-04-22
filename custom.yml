@@ -1,11 +1,11 @@
 feeds:
   - name: custom
     path: ../feeds_dir/custom
-  - name: helloworld
-    uri: https://github.com/fw876/helloworld.git
-    branch: master
+#  - name: helloworld
+#    uri: https://github.com/fw876/helloworld.git
+#    branch: master
 packages:
-  - luci-app-ssr-plus
+  #- luci-app-ssr-plus
   - luci-compat
   # - luci-app-ddns
   # - ddns-scripts
@@ -25,8 +25,8 @@ packages:
   - kmod-gl-sdk4-parental-control
 
 diffconfig: |
-  CONFIG_PACKAGE_chinadns-ng=n
-  CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG=n
+#  CONFIG_PACKAGE_chinadns-ng=n
+#  CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG=n
   CONFIG_PACKAGE_wpad-basic=n
   CONFIG_PACKAGE_wpad=n
   CONFIG_PACKAGE_dnsmasq=n
