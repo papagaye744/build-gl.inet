@@ -67,17 +67,18 @@ function build_firmware(){
     echo "$glversiontype" > package/base-files/files/etc/version.type
     
     # fix helloword build error
-    rm -rf feeds/packages/lang/golang
+    #rm -rf feeds/packages/lang/golang
     #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
     git clone -b openwrt-23.05 --depth=1 https://github.com/openwrt/packages /tmp/openwrt_packages
-    cp -R /tmp/openwrt_packages/lang/golang feeds/packages/lang/golang
-    rm -rf feeds/gl_feed_common/golang
+    cp -R /tmp/openwrt_packages/lang/rust feeds/packages/lang/rust
+    #cp -R /tmp/openwrt_packages/lang/golang feeds/packages/lang/golang
+    #rm -rf feeds/gl_feed_common/golang
     #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/gl_feed_common/golang
-    cp -rf feeds/packages/lang/golang feeds/gl_feed_common/golang
+    #cp -rf feeds/packages/lang/golang feeds/gl_feed_common/golang
     
     # update tailscale
-    rm -rf feeds/gl_feed_common/tailscale
-    cp -rf $CRTDIR/src/tailscale feeds/gl_feed_common/
+    #rm -rf feeds/gl_feed_common/tailscale
+    #cp -rf $CRTDIR/src/tailscale feeds/gl_feed_common/
     
     # fix upnp https://forum.gl-inet.cn/forum.php?mod=viewthread&tid=3240&highlight=upnp
     rm -rf feeds/packages/net/miniupnpd
