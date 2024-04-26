@@ -2,10 +2,6 @@
 description: Add the glinet dependencies
 
 packages:
-  - kmod-usb-storage
-  - kmod-usb-uhci
-  - kmod-usb2
-  - kmod-usb-ohci
   - kmod-gl-sdk4-hw-info
   - kmod-gl-sdk4-tertf
   - dnsmasq-full
@@ -15,7 +11,6 @@ packages:
   - wireless-regdb
   - httping
   - ssmtp
-  - block-mount
   - kmod-gl-sdk4-hw-info
   - kmod-gl-sdk4-tertf
   - kmod-inet-diag
@@ -47,14 +42,6 @@ packages:
   - comgt-ncm
   - chat
   - uqmi
-  - usb-modeswitch
-  - kmod-usb-acm
-  - kmod-usb-net-huawei-cdc-ncm
-  - kmod-usb-serial
-  - kmod-usb-serial-option
-  - kmod-usb-serial-wwan
-  - kmod-usb-net-cdc-ether
-  - kmod-usb-net-qmi-wwan
   - kmod-gl-sdk4-edgerouter-status
   - mqtt
   - relayd
@@ -67,9 +54,6 @@ packages:
   - kmod-ifb
   - rtty-openssl
   - wireguard-tools
-  - kmod-usb-net-ipheth
-  - usbmuxd
-  - kmod-usb-net-rndis
   - iptables-mod-extra
   - sudo
   - curl
@@ -91,8 +75,6 @@ packages:
   - swconfig
   - dhcpdiscover
   - vsftpd-tls
-  - nfs-kernel-server
-  - nfs-kernel-server-utils
   - tailscale
   - zerotier
 
@@ -139,5 +121,3 @@ diffconfig: |
   CONFIG_OPENSSL_OPTIMIZE_SPEED=y
   CONFIG_LUCI_LANG_en=y
   CONFIG_LUCI_LANG_zh_Hans=y
-  CONFIG_SAMBA4_SERVER_VFSX=n
-  CONFIG_SAMBA4_SERVER_AD_DC=n
