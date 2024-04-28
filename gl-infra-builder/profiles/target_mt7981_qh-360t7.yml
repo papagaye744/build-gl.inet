@@ -8,7 +8,9 @@ feeds:
   - name: gl_feed_common
     uri: https://github.com/gl-inet/gl-feeds.git
     # v4.3.7_common
-    revision: d868f3c578f8e6233e6436114bdf916497fd930f
+    #revision: d868f3c578f8e6233e6436114bdf916497fd930f
+    # common
+    revision: 2b1fb5879e007adeff9074555f5119ff2ffff5af
   - name: gl_feed_21_02
     uri: https://github.com/gl-inet/gl-feeds.git
     revision: 5ca5e2a9120c30bdd34368df1c07d806c48788dc
