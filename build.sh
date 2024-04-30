@@ -89,6 +89,10 @@ function build_firmware(){
     # add fullcorenat patch
     # mkdir package/network/config/firewall/patches
     # cp $CRTDIR/fullconenat.patch package/network/config/firewall/patches/fullconenat.patch
+
+    # add eqos mtk
+    git clone -b openwrt-21.02 --depth=1 https://github.com/hanwckf/immortalwrt-mt798x /tmp/immortalwrt-mt798x
+    cp -R /tmp/immortalwrt-mt798x/package/mtk/applications/luci-app-eqos-mtk feeds/custom/luci-app-eqos-mtk
     
     #install feed 
     ./scripts/feeds update -a && ./scripts/feeds install -a && make defconfig
